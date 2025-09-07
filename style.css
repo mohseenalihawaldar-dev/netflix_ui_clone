@@ -54,12 +54,31 @@ nav img {
 
 .nav-buttons {
   display: flex;
-  gap: 10px;
+  align-items: center; /* keeps both buttons aligned */
+  gap: 16px; /* spacing between dropdown and Sign In */
 }
 
 nav button {
   position: relative;
   z-index: 10;
+}
+
+/* ✅ Fix for language dropdown */
+nav select {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 1.2;
+  height: 36px; /* same height as buttons */
+  appearance: none; /* remove default browser arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* Hero Section */
@@ -116,6 +135,11 @@ nav button {
   border: 1px solid white;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  line-height: 1.2;
+  height: 36px; /* same as select */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:hover {
@@ -129,6 +153,11 @@ nav button {
   border-radius: 4px;
   border: none;
   padding: 10px 24px;
+  line-height: 1.2;
+  height: 36px; /* consistent height */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-red:hover {
@@ -140,6 +169,11 @@ nav button {
   color: white;
   padding: 8px 16px;
   border: none;
+  line-height: 1.2;
+  height: 36px; /* consistent height */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Sections */
@@ -412,6 +446,54 @@ footer .questions {
   transform: translateY(0);
 }
 
+/* Navigation */
+nav {
+  max-width: 100%; /* 🔥 make navbar span full width */
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 40px; /* 🔥 a bit more breathing room */
+}
+
+nav img {
+  width: 130px;
+  position: relative;
+  z-index: 10;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center; /* ✅ ensures vertical alignment */
+  gap: 12px; /* tighter spacing */
+}
+
+/* ✅ Make select and buttons the same size/alignment */
+nav select,
+.btn-red-sm {
+  height: 36px;
+  padding: 0 16px;
+  font-size: 14px;
+  line-height: 36px; /* ✅ keeps text vertically centered */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* ✅ Fix select styles */
+nav select {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  appearance: none; /* remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
 /* Responsive */
 @media screen and (max-width: 768px) {
   .hero > :nth-child(1) {
@@ -434,5 +516,16 @@ footer .questions {
 
   .promo-text p {
     font-size: 14px;
+  }
+
+  .nav-buttons {
+    gap: 8px; /* reduce space a bit */
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .nav-buttons {
+    flex-direction: column; /* stack vertically on very small screens */
+    gap: 10px;
   }
 }

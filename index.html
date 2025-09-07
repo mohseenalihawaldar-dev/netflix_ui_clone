@@ -136,31 +136,45 @@
     <div class="separation"></div>
 
     <!-- FAQ -->
-    <section class="faq">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faqbox">
-        <span>What is Netflix?</span>
-        <p class="answer">
-          Netflix is a streaming service with unlimited movies and TV shows.
-        </p>
-      </div>
-      <div class="faqbox">
-        <span>How much does Netflix cost?</span>
-        <p class="answer">
-          Plans start at a very affordable rate and allow multiple devices.
-        </p>
-      </div>
-      <div class="faqbox">
-        <span>What can I watch on Netflix?</span>
-        <p class="answer">
-          You can watch movies, TV shows, documentaries, and more.
-        </p>
-      </div>
-      <div class="faqbox">
-        <span>Where can I watch?</span>
-        <p class="answer">Watch anywhere, on any internet-connected device.</p>
-      </div>
-    </section>
+    <div class="faqbox">
+      <span>Can I cancel Membership anytime?</span>
+      <p class="answer">
+        Yes, you can cancel your membership at any time online with no
+        cancellation fees.
+      </p>
+    </div>
+
+    <div class="faqbox">
+      <span>Do I need internet to watch?</span>
+      <p class="answer">
+        You can download shows and movies to watch offline on your mobile
+        device. For streaming, you’ll need an internet connection.
+      </p>
+    </div>
+
+    <div class="faqbox">
+      <span>Is Netflix good for kids?</span>
+      <p class="answer">
+        Netflix has a dedicated kids experience with parental controls, so
+        children can enjoy family-friendly shows and movies.
+      </p>
+    </div>
+
+    <div class="faqbox">
+      <span>What devices can I watch on?</span>
+      <p class="answer">
+        You can stream Netflix on smart TVs, smartphones, tablets, laptops,
+        gaming consoles, and streaming devices.
+      </p>
+    </div>
+
+    <div class="faqbox">
+      <span>Is there a free trial?</span>
+      <p class="answer">
+        Netflix no longer offers a free trial in most regions, but you can start
+        with a low-cost plan and upgrade anytime.
+      </p>
+    </div>
 
     <div class="separation"></div>
 
@@ -203,34 +217,6 @@
       </div>
     </footer>
 
-    <script>
-      // Navbar scroll effect
-      window.addEventListener("scroll", () => {
-        const nav = document.querySelector(".sticky-nav");
-        nav.classList.toggle("scrolled", window.scrollY > 50);
-      });
-
-      // Scroll reveal effect
-      const reveals = document.querySelectorAll(".reveal");
-      window.addEventListener("scroll", () => {
-        for (let i = 0; i < reveals.length; i++) {
-          const windowHeight = window.innerHeight;
-          const elementTop = reveals[i].getBoundingClientRect().top;
-          const elementVisible = 150;
-          if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-          } else {
-            reveals[i].classList.remove("active");
-          }
-        }
-      });
-
-      // FAQ toggle
-      document.querySelectorAll(".faqbox").forEach((box) => {
-        box.addEventListener("click", () => {
-          box.classList.toggle("open");
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
