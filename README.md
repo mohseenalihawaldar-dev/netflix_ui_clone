@@ -37,7 +37,7 @@ All you need is a modern web browser.
 ### Installation
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-github-username/StreamCore-Netflix-UI-Clone.git](https://github.com/your-github-username/StreamCore-Netflix-UI-Clone.git)
+    git clone https://github.com/mohseenalihawaldar-dev/StreamCore-Netflix-UI-Clone.git
     ```   
 2.  **Navigate to the project directory:**
     ```bash
