@@ -7,7 +7,7 @@ A responsive and visually faithful UI clone of the Netflix streaming platform, b
 ---
 
 ![StreamCore Netflix UI Clone]([https://i.imgur.com/uC00wZc.png](https://github.com/mohseenalihawaldar-dev/StreamCore-Netflix-UI-Clone/blob/main/netflix.png?raw=true))
-*(Feel free to replace this with a screenshot of your actual project!)*
+
 
 ---
 
